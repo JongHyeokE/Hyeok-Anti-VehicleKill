@@ -28,7 +28,11 @@ function Hyeok_S.vehicleKill(attacker, isPlayer)
     -- 설정 시간내에 설정값 이상의 킬이 발생한 경우 실행
     if vehicles[user_id] > sv_config.killThreshold then
         if os.time() - checkTime[user_id] <= sv_config.killCheckInterval * 60 then
-            -- 킥 or 밴 함수 넣어서 사용하세요.
+            if sv_config.isBan then
+                vRP.ban({user_id, sv_config.banMsg})
+            else
+                vRP.kick({user_id, sv_config.kickMsg})
+            end
             return
         end
     end

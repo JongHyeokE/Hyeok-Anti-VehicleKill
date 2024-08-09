@@ -9,3 +9,14 @@ sv_config = {}
 
 sv_config.killCheckInterval = 1
 sv_config.killThreshold = 3
+
+--[[
+    sv_config.isBan = 차단 여부
+        (true = 차단, false = 차단 안함)
+    sv_config.banMsg = 차단 메시지
+    sv_config.kickMsg = 추방 메시지
+]]
+
+sv_config.isBan = false
+sv_config.banMsg = "차량을 이용한 비정상적인 킬 행위가 감지되어 '차단'되었습니다."
+sv_config.kickMsg = "차량을 이용한 비정상적인 킬 행위가 감지되어 '추방'되었습니다."
